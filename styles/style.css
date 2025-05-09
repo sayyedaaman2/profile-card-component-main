@@ -142,7 +142,7 @@ body {
 .card{
     background-color: hsl(var(--clr-white));
     z-index: 1;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
 
 }
