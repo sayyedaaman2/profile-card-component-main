@@ -5,31 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./styles/style.css">
   <title>Frontend Mentor | Profile card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
 <body>
-  Victor Crest
-  26
-  London
+ <div class="wrapper">
+  <main class="main">
+    <div class="container">
+      <div class="card">
+        <div class="top-section">
+          <img src="./images/bg-pattern-card.svg" alt="" aria-hidden="true"/>
+        </div>
+        <div class="content-section">
+          <div class="avatar">
+            <img src="./images/image-victor.jpg" alt="user profile" aria-label="user profile"/>
+          </div>
+          <div class="user">
+            
+            <h1 class="user-name">
+              Victor Crest  <span>
+                26
+              </span>
+            </h1>
+           
+          <p class="user-location">
+              London
+          </p>
+          </div>
+         
+        </div>
+        <div class="user-content">
+          <ul class="user-content-container">
+            <li class="user-content-list">
+              <h4>80K</h4>
+              <p>Followers</p>
+            </li>
+            <li class="user-content-list">
+              <h4>803K</h4>
+              <p>Likes</p>
+            </li>
+            <li class="user-content-list">
+              <h4>1.4K</h4>
+              <p>Photos</p>
+            </li>
+          </ul>
+        </div>
+       
+      </div>
+    </div>
+  </main>
+  <img src="./images/bg-pattern-top.svg" class="bg-image-top" alt="" aria-hidden="true"/>
+  <img src="./images/bg-pattern-bottom.svg" class="bg-image-bottom" alt="" aria-hidden="true"/>
 
-  80K
-  Followers
-
-  803K
-  Likes
-
-  1.4K
-  Photos
-  <div class="attribution">
+  <footer >
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </footer>
+ </div>
+ 
 </body>
 </html>

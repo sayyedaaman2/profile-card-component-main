@@ -1,0 +1,216 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+/* 
+font-family: "Kumbh Sans", sans-serif;
+ */
+/* CSS RESET */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+ul,li{
+    list-style: none;
+}
+
+/* CUSTOM PROPERTIES */
+:root {
+    /* colors */
+    /* primary */
+    --clr-dark-cyan: 185 75% 39%;
+    --clr-dark-desturated-blue: 229 23% 23%;
+    --clr-grayish-blue: 227 10% 46%;
+
+
+    /* neutral */
+    --clr-white: 0 0% 100%;
+    --clr-black: 0 0% 0%;
+    --clr-dark-gray: 0 0% 59%;
+
+
+    /* font-families */
+    --fs-sans-serif: "Kumbh Sans", sans-serif;
+
+    /* font-weights */
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    /* typography */
+    --fs-200 : .5rem;
+    --fs-300 : 0.75rem;
+
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.75rem;
+    --fs-800: 2rem;
+    --fs-900: 2.5rem;
+
+}
+
+/* GENERAL CLASSES */
+body {
+    position: relative;
+    min-height: 100vh;
+    font-family: var(--fs-sans-serif);
+    font-size: var(--fs-300);
+    font-weight: var(--fw-normal);
+    color: hsl(var(--clr-dark-gray));
+    background-color: hsl(var(--clr-dark-cyan));
+    display: flex;
+    overflow: hidden;
+}
+
+/* LAYOUT */
+.wrapper {
+    flex : 1;
+    position: relative;
+    display : grid;
+    grid-template-rows: 1fr 4rem;
+}
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 2rem;
+}
+
+/* background images */
+.bg-image-top {
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    top : -50%;
+    left : -50%;
+    
+
+
+}
+
+.bg-image-bottom {
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    bottom : -50%;
+    right : -50%;
+}
+@media screen and (min-width:768px) {
+    .bg-image-top {
+        
+        height: 1000px;
+        width: 1000px;
+        top : -400px;
+        left :-300px;
+    
+    }
+    
+    .bg-image-bottom {
+        
+        height: 1000px;
+        width: 1000px;
+        bottom : -400px;
+        right :-300px;
+        
+    }
+}
+
+/* COMPONENT */
+.card{
+    background-color: hsl(var(--clr-white));
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+
+}
+.content-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 4rem 1rem 1rem 1rem;
+}
+
+.avatar{
+    position: absolute;
+    top : -100%;
+    transform: translateY(100%);
+}
+.avatar img{
+    height: 90px;
+    width: 90px;
+    border-radius: 100%;
+    border : 5px solid hsl(var(--clr-white));
+}
+.user{
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap : 0.5rem;
+}
+.user-name{
+    font-size: var(--fs-400);
+font-weight: var(--fw-bold);
+    color : hsl(var(--clr-black));
+}
+.user-name span{
+    font-weight: var(--fw-normal);
+
+    color: hsl(var(--clr-dark-gray));
+}
+
+.user-content{
+    border-top : 1px solid hsl(var(--clr-dark-gray));
+}
+.user-content-container{
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.user-content-list{
+    display: flex;
+    flex-direction: column;
+    gap : 0.2rem;
+}
+.user-content-list p {
+    font-size: var(--fs-200);
+    letter-spacing: 2px;
+}
+.user-content-list h4 {
+    font-size: var(--fs-400);
+    color : hsl(var(--clr-black));
+    font-weight: var(--fw-bold);
+}
+footer {
+    display: none;
+}
+
+/* MEDIA QUERIES */
